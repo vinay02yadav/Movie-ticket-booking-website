@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>movies</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alkatra&family=Bebas+Neue&family=Roboto:ital,wght@1,300&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      html,
+      body {
+        height: 100%;
+        overflow-x: hidden;
+      }
+      .body {
+        height: 100%;
+        overflow-x: hidden;
+      }
+      .bg-body-tertiary {
+        --darkreader-bg--bs-bg-opacity: 1;
+        background-color: #8a2be2 !important;
+      }
+      .navbar-expand-lg .navbar-nav {
+        flex-direction: row;
+        left: 78%;
+        position: relative;
+      }
+      .logintext {
+        font-size: 50px;
+        color: blueviolet;
+      }
+
+      #create-form {
+        position: relative;
+        left: 37%;
+        text-align: center;
+        margin-top: 10%;
+        margin-bottom: 5%;
+        width: 28%;
+        border: 2px solid blueviolet;
+        padding-left: 2px;
+        padding-top: 2px;
+        padding-bottom: 4px;
+      }
+      .form-control {
+        position: relative;
+        text-align: center;
+        left: 17%;
+        width: 65%;
+      }
+      .btn {
+        position: relative;
+        left: -2.7%;
+        margin-bottom: 4%;
+        margin-top: 3%;
+        margin-left: 20px;
+      }
+      .yo {
+        width: 100%;
+        height: 100%;
+        position: relative;
+      }
+      .yovenue {
+        position: relative;
+        width: 30%;
+        height: 100%;
+        display: inline-block;
+        background-color: #322f2f;
+      }
+      .labeldiv {
+        text-align: center;
+        left: 100%;
+        position: absolute;
+        width: 234%;
+        height: auto;
+        display: inline-block;
+        bottom: 10%;
+      }
+      .labl {
+        display: inline-block;
+        border: 1px solid #ff7fdff2;
+        padding: 4px 9px 4px 6px;
+        display: inline-block;
+        text-align: center;
+        margin-left: 10px;
+        margin-top: 10px;
+        position: relative;
+        top: 4%;
+      }
+
+      .container {
+        width: 96%;
+        position: relative;
+        display: block;
+        top: 10%;
+        margin: auto;
+        background-image: linear-gradient(
+          -225deg,
+          rgb(201, 0, 96) 0%,
+          rgb(57, 36, 133) 48%,
+          rgb(0, 105, 158) 100%
+        ) !important;
+        overflow: hidden;
+        
+        margin-top: 20px;
+      }
+
+      .container ul {
+        padding: 0px;
+        margin: 0px;
+      }
+
+      .container ul li {
+        float: left;
+        list-style: none;
+        width: 82%;
+        height: 180px;
+        box-shadow: #0c0b0b 20px 19px 21px -7px !important;
+        background-color: rgb(30, 32, 33) !important;
+        margin: 22px 4px 26px 107px;
+        box-sizing: border-box;
+      }
+
+      .container ul li .bottom {
+        width: 19%;
+        height: 260px;
+        line-height: 50px;
+        background: blue;
+        text-align: center;
+        color: white;
+        font-size: 20px;
+      }
+      .containerrr {
+        width: 18%;
+        top: 22%;
+        height: 56%;
+        position: absolute;
+        left: 27%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url({{details.image}});
+      }
+      .material {
+        width: 26%;
+        top: 29%;
+        word-wrap: break-word;
+        height: 49%;
+        position: relative;
+        left: 47%;
+        text-align: center;
+      }
+      .description {
+        width: 80%;
+        top: 3%;
+        margin-top: 3%;
+        word-wrap: break-word;
+        height: auto;
+        position: relative;
+        left: 10%;
+        font-family: "Alkatra", cursive;
+        font-size: 19px;
+        text-align: center;
+      }
+      .text {
+        font-family: "Bebas Neue", cursive;
+        font-size: 57px;
+        width: auto;
+      }
+      .text1 {
+        font-family: "Alkatra", cursive;
+        font-size: 20px;
+      }
+      .text2 {
+        font-family: "Alkatra", cursive;
+        font-size: 34px;
+        position: relative;
+        left: 46%;
+        top: 15%;
+      }
+      .t {
+        font-family: "Roboto", sans-serif;
+        font-size: 16px;
+        text-align: center;
+        overflow: hidden;
+        position: relative;
+        top: 8%;
+      }
+      .con1 {
+        width: 94%;
+        position: relative;
+        display: block;
+        top: 3%;
+        margin: auto;
+        overflow: hidden;
+        height: 80%;
+      }
+      .t1 {
+        font-size: 35px;
+        color: red;
+        font-family: "Bebas Neue", cursive;
+        width: auto;
+      }
+      .form {
+        top: 14%;
+        position: relative;
+        margin-bottom: 10%;
+      }
+
+      @media screen and (max-width: 1250px) {
+        .container ul li {
+          width: 40%;
+          margin-left: 40px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">{{username}}'s &nbsp; Dashboard</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="navbar-brand">
+              <a class="nav-link active" aria-current="page" href="/movie_dashboard/{{username}}/summary"
+                >Summary</a
+              >
+            </li>
+            <li class="navbar-brand">
+              <a class="nav-link active" aria-current="page" href="/">Logout</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <form action="/movie_dashboard/{{username}}/{{details.movie_name}}/{{details.location}}/{{details.place}}/{{details.venue}}/{{details.time}}/{{details.date}}/booking" method="POST">
+    <div id="create-form">
+        <p class="logintext">Booking</p>
+        <p class="ttext">Total seats : {{details.total_seats}}</p>
+        <p class="ttext">Seats Left : {{details.seats_left}}</p>
+        <br />
+
+        {% if details.seats_left == 0 %}
+        <p class="t1">SORRY !! &nbsp;HOUSEFULL</p>
+        {% endif %} {% if details.seats_left != 0 %}
+        <div class="mb-3">
+          <label for="formGroupExampleInput" class="form-label"
+            >Number of seats :</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            oninput="check()"
+            id="formGroupExampleInput1"
+            name="number_of_seats"
+            placeholder="Eg : 3"
+            required
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="formGroupExampleInput" class="form-label"
+            >Price of Ticket per seat:</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="formGroupExampleInput"
+            name="show"
+            value="{{details.price}}"
+            disabled
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="formGroupExampleInput" class="form-label"
+            >Total Price:</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="price"
+            name="show"
+            disabled
+          />
+        </div>
+
+        <button
+          type="Submit"
+          class="btn btn-outline-success"
+          id="{{details.movie_name}}"
+          name="btnn"
+          onclick="confirm()"
+        >
+          Confirm Booking
+        </button>
+
+    </form>
+    {% endif %} 
+    
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+
+
+    
+<script type="text/javascript">
+    function check() {
+      var x = parseInt(document.getElementById("formGroupExampleInput1").value);
+      var y = parseInt("{{details.price}}");
+      if(x > parseInt("{{details.seats_left}}") ){
+        document.getElementById("{{details.movie_name}}").innerHTML = 'Not enough seats'
+        document.getElementById("{{details.movie_name}}").disabled = true
+      }
+      else{
+        document.getElementById("price").value = x * y;
+        document.getElementById("{{details.movie_name}}").innerHTML = 'Confirm Booking'
+        document.getElementById("{{details.movie_name}}").disabled = false
+     }
+    }
+
+    function confirm(){
+      alert("Your ticket is booked")
+    }
+  </script>
+
+    
+  </body>
+</html>
